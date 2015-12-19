@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8"/>
+        <title>HTML中用JS调用OC方法</title>
+        <script>
+            function webCallNative(method, param)
+            {
+                window.location = "mgnative://"+method+"/"+param;
+            }
+            function nativeCallWeb(someThing)
+            {
+                alert("I'm Web Alert, Called from Native: " + someThing);
+      		}
+        </script>
+    </head>
+    <body>
+        <h1 onclick="webCallNative('showAlert', 'testparam')">显示Native Alert</h1>
+    </body>
+</html>
